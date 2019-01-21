@@ -17,10 +17,6 @@
     document.getElementById(lightId).className = 'light-green';
    }
 
-   
-  
-   
-
   /*
    * Create a function named setMyLightClass
    * which takes two arguments: event, desiredClass
@@ -36,7 +32,7 @@
    const setMyLightClass = (event, desiredClass) => {
     let lightId = this.dataset.lightId;
     document.getElementById(lightId).className = desiredClass;
-   }
+   };
 
 
   /*
@@ -72,7 +68,7 @@
 
    btn1.addEventListener('click', function (){
     setMyLightGreen.apply(this);
-   })
+   });
 
   /*
    * Add a click event listener to btn2
@@ -83,6 +79,10 @@
    * to set the context to the correct object
    */
 
+   btn2.addEventListener('click', function(){
+     setMyLightGreen.apply(this);
+   });
+   
 
   /*
    * Add a click event listener to btn3
