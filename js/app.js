@@ -83,12 +83,12 @@
      setMyLightGreen.apply(this);
    });
    
-
   /*
    * Add a click event listener to btn3
    * the handler method will be a reference to the setMyLightGreen function
    */
 
+   btn3.addEventListener('click', setMyLightGreen);
 
   /*
    * Add a click event listener to btn4
@@ -101,6 +101,9 @@
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+   btn4.addEventListener('click', function(event){
+     setMyLightGreen.apply(this, [event, 'light-green']);
+   });
 
   /*
    * Add a click event listener to btn5
