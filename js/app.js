@@ -29,7 +29,7 @@
    * on this dom element, set the className to the value of desiredClass
    */
 
-   const setMyLightClass = (event, desiredClass) => {
+   function setMyLightClass(event, desiredClass){
     let lightId = this.dataset.lightId;
     document.getElementById(lightId).className = desiredClass;
    };
@@ -159,6 +159,9 @@
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+  btn8.addEventListener('click', function(event){
+    setMyLightClass.call(this,event, 'light-green');
+  });
 
   /*
    * Add a click event listener to btn9
